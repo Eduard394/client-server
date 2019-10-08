@@ -8,7 +8,7 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # connect the client
 # client.connect((target, port))
-client.connect(('168.235.64.203', 9999))
+client.connect(('168.235.64.203', 80))
 
 # send some data (in this case a HTTP GET request)
 client.send('GET /index.html HTTP/1.1\r\nHost: {}.{}\r\n\r\n'.format(sld, tld))
