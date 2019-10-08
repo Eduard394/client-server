@@ -1,6 +1,6 @@
 import socket
 
-hostname, sld, tld, port = 'www', 'integralist', 'co.uk', 80
+hostname, sld, tld, port = 'www', 'integralist', 'co.uk1', 80
 target = '{}.{}.{}'.format(hostname, sld, tld)
 
 # create an ipv4 (AF_INET) socket object using the tcp protocol (SOCK_STREAM)
@@ -8,7 +8,7 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # connect the client
 # client.connect((target, port))
-client.connect(('0.0.0.0', 9999))
+client.connect(('168.235.64.203', 9999))
 
 # send some data (in this case a HTTP GET request)
 client.send('GET /index.html HTTP/1.1\r\nHost: {}.{}\r\n\r\n'.format(sld, tld))
