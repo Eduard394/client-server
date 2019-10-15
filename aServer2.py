@@ -53,7 +53,7 @@ class TelnetClient(threading.Thread):
      
  def prompt(self):
      try:
-         self.send('356612024234991')
+         self.send('356612022632899')
          recv_list = self.recv().split()
          print recv_list
          return recv_list[0].lower(), recv_list[1:]
