@@ -14,7 +14,7 @@ print 'Listening on {}:{}'.format(bind_ip, bind_port)
 def handle_client_connection(client_socket):
     request = client_socket.recv(1024)
     print 'Received {}'.format(request)
-    client_socket.send('356612024234991')
+    client_socket.send(356612024234991)
     client_socket.close()
 
 while True:
