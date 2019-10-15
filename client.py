@@ -7,7 +7,9 @@ target = '{}.{}.{}'.format(hostname, sld, tld)
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # connect the client
-# client.connect((target, port))
+client.connect((target, port))
+#client.connect(('168.235.64.203', 50001))
+
 client.connect(('127.0.0.1', 50001))
 
 # send some data (in this case a HTTP GET request)

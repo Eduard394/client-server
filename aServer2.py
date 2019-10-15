@@ -56,6 +56,7 @@ class TelnetClient(threading.Thread):
          self.send('356612024234991')
          recv_list = self.recv().split()
          return recv_list[0].lower(), recv_list[1:]
+         self.close()
      except IndexError:
          return None, []
  def close(self):
