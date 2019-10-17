@@ -3,7 +3,8 @@ import threading
 import socket
 import sys
 import time
-
+from datetime import date
+from datetime import datetime
 
 class TelnetServer(threading.Thread):
  def __init__(self):
@@ -55,7 +56,12 @@ class TelnetClient(threading.Thread):
      try:
          self.send('356612022632899')
          recv_list = self.recv().split()
+         now = datetime.now()
+
+         #data = [now, recv_list] 
+         print now
          print recv_list
+         print '*****************************************'
          return recv_list[0].lower(), recv_list[1:]
      except IndexError:
          return None, []
